@@ -105,4 +105,4 @@ $official_lanugages = $location->official_lanugages;
 ## License
 This package is open-sources and licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Thank you very much. Please give a star.
+Thank you very much.
