@@ -57,7 +57,7 @@ class IpLocation{
             $this->long = $data->geo->longitude;
             $this->currency = $data->currency_code;
             $this->map = "https://www.google.com/maps/@$this->lat,$this->long,17z";
-            $this->flag = 'https://www.github.com/MunnaAhmed/IpLocation/Flag/'.strtolower($data->un_locode).'.png';
+            $this->flag = 'https://raw.githubusercontent.com/MunnaAhmed/Flags/main/'.strtolower($data->un_locode).'.png';
         }catch(Exception $e){
             throw new IpLocationException("Location Parsing Problem. Please try again later");
         }
