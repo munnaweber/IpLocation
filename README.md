@@ -102,7 +102,53 @@ $lanugage = $location->lanugage;
 $official_lanugages = $location->official_lanugages;
 ```
 
+## JSON data sample For All Info
+
+```json
+{
+"ip": "99.48.53.132",
+"region": "Americas",
+"continent": "North America",
+"countryName": "United States of America",
+"cityName": "Stone Mountain",
+"zipCode": "30083",
+"timeZone": "-05:00",
+"countryCode": "US",
+"nationality": "American",
+"currency": "USD",
+"ioc": "USA",
+"flag": "https://raw.githubusercontent.com/MunnaAhmed/Flags/main/us.png",
+"lat": 37.09024,
+"long": -95.712891,
+"map": "https://www.google.com/maps/@37.09024,-95.712891,17z",
+"geo": {
+"latitude": 37.09024,
+"latitude_dec": "39.44325637817383",
+"longitude": -95.712891,
+"longitude_dec": "-98.95733642578125",
+"max_latitude": 71.5388001,
+"max_longitude": -66.885417,
+"min_latitude": 18.7763,
+"min_longitude": 170.5957,
+"bounds": {
+"northeast": {
+"lat": 71.5388001,
+"lng": -66.885417
+},
+"southwest": {
+"lat": 18.7763,
+"lng": 170.5957
+}
+}
+},
+"lanugage": "en",
+"official_lanugages": [
+"en"
+]
+}
+```
+
 ## License
 This package is open-sources and licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Thank you very much.
+Thank you very much. Please give a star.

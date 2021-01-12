@@ -42,20 +42,24 @@ class IpLocation{
     public function init(){
         $url = "https://api.ipgeolocationapi.com/geolocate/".$this->ip;
         try{
-            $info = \file_get_contents($url);
+            $info = file_get_contents($url);
+            $data = json_decode($info, true);
+            if(isset($data['message']) && $data['message'] == "Could not geocode request."){
+                throw new IpLocationException("Could not geocode request. May Be IP address is invalid");
+            }
             $data = json_decode($info);
-            $this->continent = $data->continent;
-            $this->countryName = $data->name;
-            $this->ioc = $data->ioc;
-            $this->region = $data->region;
-            $this->countryCode = $data->un_locode;
-            $this->nationality = $data->nationality;
-            $this->lanugage = $data->languages_official[0];
-            $this->official_lanugages = $data->languages_official;
-            $this->geo = $data->geo;
-            $this->lat = $data->geo->latitude;
-            $this->long = $data->geo->longitude;
-            $this->currency = $data->currency_code;
+            $this->continent = $data->continent ?: null;
+            $this->countryName = $data->name ?: null;
+            $this->ioc = $data->ioc ?: null;
+            $this->region = $data->region ?: null;
+            $this->countryCode = $data->un_locode ?: null;
+            $this->nationality = $data->nationality ?: null;
+            $this->lanugage = $data->languages_official[0] ?: null;
+            $this->official_lanugages = $data->languages_official ?: null;
+            $this->geo = $data->geo ?: null;
+            $this->lat = $data->geo->latitude ?: null;
+            $this->long = $data->geo->longitude ?: null;
+            $this->currency = $data->currency_code ?: null;
             $this->map = "https://www.google.com/maps/@$this->lat,$this->long,17z";
             $this->flag = 'https://raw.githubusercontent.com/MunnaAhmed/Flags/main/'.strtolower($data->un_locode).'.png';
         }catch(Exception $e){
