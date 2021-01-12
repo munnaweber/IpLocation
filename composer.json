@@ -1,6 +1,6 @@
 {
     "name": "munna/iplocation",
-    "description": "Geo Location Tracking By IP address. Its providing more flexible information about any country.. Its completely free and opensource.",
+    "description": "Geo Location Tracking By IP address. Its providing more flexible information about any country.. Its completely free and open source.",
     "type": "package",
     "license": "MIT",
     "authors": [{
