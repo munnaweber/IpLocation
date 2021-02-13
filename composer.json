@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Munna\\IpLocation\\IplocationServiceProvider"
+                "Munna\\IpLocation\\IpLocationServiceProvider"
             ]
         }
     }
