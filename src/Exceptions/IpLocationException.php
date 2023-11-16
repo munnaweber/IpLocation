@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Munna\IpLocation\Exceptions;
 use Exception;
 
@@ -19,7 +19,7 @@ class IpLocationException extends Exception{
 
     // render
     public function render(){
-        return reponse()->json(['status' => false, 'message' => $this->message]);
+        return response()->json(['status' => false, 'message' => $this->message]);
     }
 
 }
